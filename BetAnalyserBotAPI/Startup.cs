@@ -16,7 +16,7 @@ namespace AnalyserBetBotAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
+            services.AddHttpClient();
             //Logic
             RegisterLogic(services);
             services.AddSwaggerGen(c =>

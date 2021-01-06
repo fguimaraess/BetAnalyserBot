@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Domain
 {
     public interface IBetLogic
     {
-        object GetBetsToday();
+        Task<object> GetBetsToday();
     }
 }

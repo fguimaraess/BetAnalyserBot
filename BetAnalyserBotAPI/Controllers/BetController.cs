@@ -1,5 +1,6 @@
 ﻿using Domain;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace BetAnalyserBotAPI.Controllers
 {
@@ -15,9 +16,9 @@ namespace BetAnalyserBotAPI.Controllers
         }
 
         [HttpGet("get-bets-today")]
-        public IActionResult GetBetsToday()
+        public async Task<IActionResult> GetBetsToday()
         {
-            return Ok(_betLogic.GetBetsToday());
+            return Ok(await _betLogic.GetBetsToday());
         }
     }
 }
